@@ -1,26 +1,24 @@
 //
-//  Recs.m
+//  StatsViewController.m
 //  MoviesApp
 //
-//  Created by Chad Swenson on 4/26/14.
+//  Created by chad swenson on 5/8/14.
 //  Copyright (c) 2014 Chad Swenson. All rights reserved.
 //
 
-#import "Recs.h"
-#import "RecView.h"
+#import "StatsViewController.h"
 
-@interface Recs ()
+@interface StatsViewController ()
 
 @end
 
-@implementation Recs
+@implementation StatsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
     }
     return self;
 }
@@ -28,29 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading th2e view.
-    self.navigationItem.title = @"What to Watch";
-    
-    UINib *nib = [UINib nibWithNibName:@"RecView" bundle:nil];
-    RecView *view = [[nib instantiateWithOwner:self options:nil] objectAtIndex:0];
-    RecView *view2 = [[nib instantiateWithOwner:self options:nil] objectAtIndex:0];
-    
-    CGRect f = view2.frame;
-    f.origin.x = 320;
-    view2.frame = f;
-    
-    [self.recPages addSubview:view];
-    [self.recPages addSubview:view2];
-    
-    self.recPages.contentSize = CGSizeMake(640, self.view.frame.size.height);
-    
-    
-    
-   /* CGRect f = self.recPages.frame;
-    f.origin.y = 100; // new x
-    self.recPages.frame = f;*/
-    
-    
+    // Do any additional setup after loading the view.
+    self.navigationItem.title = @"Stats";
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,0 +1,174 @@
+<html>
+
+	<head>
+		<style>
+			.phone{
+				position:relative;
+				display:inline-block;
+				z-index:30;
+				top:20px;
+				width:400px;
+			}
+			.iphone{
+				position:absolute;
+				display:inline-block;
+				z-index:1;
+			}
+			.ani{
+				position:absolute;
+				display:inline-block;
+				z-index:2;
+				top:93;
+				left:66;
+			}
+			body{
+				background:#000;
+				background:url('blue.jpg');
+				margin:0pc;
+				padding:0px;
+				overflow:hidden;
+				width:100%;
+				height:100%;
+				color:#f2f2f2;
+				font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			}
+			.overlay{
+				background:#000;
+				width:100%;
+				height:100%;
+				position:absolute;
+				display:inline-block;
+				z-index:1;
+				opacity:0;
+				top:0px;
+				left:0px;
+			}
+			.shine
+			{
+			    background: #fff -webkit-gradient(linear, left top, right top, from(#f2f2f2), to(#f2f2f2), color-stop(0.2, #757575)) 0 0 no-repeat;
+			    -webkit-background-size: 525px;
+			    
+			    color: rgba(255, 255, 255, 0.1);
+			    -webkit-background-clip: text;
+			    
+			    -webkit-animation-name: shine;
+			    -webkit-animation-duration: 10s;
+			    -webkit-animation-iteration-count: infinite;
+			}
+
+			@-webkit-keyframes shine
+			{
+			    0%
+			    {
+			        background-position: top left -500px;
+			    }
+			    100%
+			    {
+			        background-position: top right -500px;
+			    }
+			}
+			.shine2
+			{
+			    background: #fff -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f2f2f2), color-stop(0.2, #757575)) 0 0 no-repeat;
+			    -webkit-background-size: 525px 300px;
+			    
+			    color: rgba(255, 255, 255, 0.1);
+			    -webkit-background-clip: text;
+			    
+			    -webkit-animation-name: shine2;
+			    -webkit-animation-duration: 1s;
+			    -webkit-animation-iteration-count: infinite;
+			}
+
+			@-webkit-keyframes shine2
+			{
+			    0%
+			    {
+			        background-position: top -500px left 0px;
+			    }
+			    100%
+			    {
+			        background-position: bottom 500px left 0px;
+			    }
+			}
+			.text{
+				display:inline-block;
+				position:relative;
+				float:left;
+				max-width:400;
+				font-weight:100;
+				font-size:25px;
+
+			}
+			h1{
+				font-weight:200;
+				font-size:65px;
+				opacity:1;
+			}
+			.content{
+				position:relative;
+				display:block;
+				margin:0px auto;
+				z-index:30;
+				top:20px;
+				width:800px;
+			}
+			p{
+				
+				font-weight:200;
+			}
+			.b{
+				display:inline-block;
+				position:relative;
+				color:#fff;
+				padding:10px 30px;
+				background:#16b578;
+				border-radius:3px;
+				font-size:20px;
+			}
+			input{
+				background:rgba(0,0,0,0.1);
+				border:0px solid #000;
+				border-bottom:1px solid #fff;
+				outline:none;
+				font-size:25px;
+				font-weight:100;
+				color:#fff;
+				width:300px;
+			}
+			input[type=text]{
+				font-weight:100;
+
+			}
+		
+		</style>
+	</head>
+
+	<body>
+		<div class="content">
+		<div class="text shine2">
+			<h1 class="shine">Popcorn</h1>
+			<p>&#8226; Popcorn predicts the movies you have seen. Just swipe through them.</p>
+			<p>&#8226; Get the best movie recommendations of all time.</p>
+			<p>&#8226; View one of a kind global and personal film stats.</p>
+			<p>&#8226; Quickly create a list of every movie you have ever seen.</p>
+			<form>
+				<input type="text" name="firstname" placeholder="notify">
+				<div class="b">
+					Me!
+				</div>
+			</form>
+
+		</div>
+		<div class="phone">
+			<img src="ani.gif" class="ani" width="255px"/>
+			<img src="iphone.png" class="iphone" width="400px"/>
+		</div>
+	</div>
+		<div class="overlay">
+
+		</div>
+
+	</body>
+
+</html>

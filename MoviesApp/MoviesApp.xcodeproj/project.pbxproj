@@ -16,8 +16,6 @@
 		38F6A65F190C7C300040448B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F6A65E190C7C300040448B /* AppDelegate.m */; };
 		38F6A662190C7C300040448B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A660190C7C300040448B /* Main_iPhone.storyboard */; };
 		38F6A665190C7C300040448B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A663190C7C300040448B /* Main_iPad.storyboard */; };
-		38F6A668190C7C300040448B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F6A667190C7C300040448B /* FirstViewController.m */; };
-		38F6A66B190C7C300040448B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F6A66A190C7C300040448B /* SecondViewController.m */; };
 		38F6A66D190C7C300040448B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A66C190C7C300040448B /* Images.xcassets */; };
 		38F6A674190C7C300040448B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F6A673190C7C300040448B /* XCTest.framework */; };
 		38F6A675190C7C300040448B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F6A64E190C7C300040448B /* Foundation.framework */; };
@@ -49,6 +47,21 @@
 		38F6A6BC190DE9510040448B /* poster8.png in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A6A6190DE9510040448B /* poster8.png */; };
 		38F6A6BD190DE9510040448B /* poster9.png in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A6A7190DE9510040448B /* poster9.png */; };
 		38F6A6BE190DE9510040448B /* posters.psd in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A6A8190DE9510040448B /* posters.psd */; };
+		E071DE8319209EBA00079791 /* icons.psd in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7A19209EBA00079791 /* icons.psd */; };
+		E071DE8419209EBA00079791 /* not-seen-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7B19209EBA00079791 /* not-seen-filled.png */; };
+		E071DE8519209EBA00079791 /* not-seen.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7C19209EBA00079791 /* not-seen.png */; };
+		E071DE8619209EBA00079791 /* thumb-avg-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7D19209EBA00079791 /* thumb-avg-filled.png */; };
+		E071DE8719209EBA00079791 /* thumb-avg.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7E19209EBA00079791 /* thumb-avg.png */; };
+		E071DE8819209EBA00079791 /* thumb-down-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7F19209EBA00079791 /* thumb-down-filled.png */; };
+		E071DE8919209EBA00079791 /* thumb-down.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE8019209EBA00079791 /* thumb-down.png */; };
+		E071DE8A19209EBA00079791 /* thumb-up-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE8119209EBA00079791 /* thumb-up-filled.png */; };
+		E071DE8B19209EBA00079791 /* thumbs-up.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE8219209EBA00079791 /* thumbs-up.png */; };
+		E071DEDA1922789D00079791 /* RecView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E071DED91922789D00079791 /* RecView.xib */; };
+		E071DEDD1922796100079791 /* RecView.m in Sources */ = {isa = PBXBuildFile; fileRef = E071DEDC1922796100079791 /* RecView.m */; };
+		E071DEDF1922E01700079791 /* large-poster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E071DEDE1922E01700079791 /* large-poster.jpg */; };
+		E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */; };
+		E0C6DE42191CA37200740C1E /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE41191CA37200740C1E /* StatsViewController.m */; };
+		E0C6DE46191CA67700740C1E /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE45191CA67700740C1E /* MovieViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,20 +88,16 @@
 		38F6A65E190C7C300040448B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38F6A661190C7C300040448B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		38F6A664190C7C300040448B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		38F6A666190C7C300040448B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		38F6A667190C7C300040448B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		38F6A669190C7C300040448B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		38F6A66A190C7C300040448B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		38F6A66C190C7C300040448B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38F6A672190C7C300040448B /* MoviesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F6A673190C7C300040448B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		38F6A67B190C7C300040448B /* MoviesAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoviesAppTests-Info.plist"; sourceTree = "<group>"; };
 		38F6A67D190C7C300040448B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38F6A67F190C7C300040448B /* MoviesAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesAppTests.m; sourceTree = "<group>"; };
-		38F6A689190C7DDA0040448B /* Recs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recs.h; sourceTree = "<group>"; };
-		38F6A68A190C7DDA0040448B /* Recs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recs.m; sourceTree = "<group>"; };
-		38F6A68C190C7E410040448B /* Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Add.h; sourceTree = "<group>"; };
-		38F6A68D190C7E410040448B /* Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Add.m; sourceTree = "<group>"; };
+		38F6A689190C7DDA0040448B /* Recs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recs.h; path = MoviesApp/Recs.h; sourceTree = "<group>"; };
+		38F6A68A190C7DDA0040448B /* Recs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recs.m; path = MoviesApp/Recs.m; sourceTree = "<group>"; };
+		38F6A68C190C7E410040448B /* Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Add.h; path = MoviesApp/Add.h; sourceTree = "<group>"; };
+		38F6A68D190C7E410040448B /* Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Add.m; path = MoviesApp/Add.m; sourceTree = "<group>"; };
 		38F6A68F190DE4A60040448B /* PosterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosterView.h; sourceTree = "<group>"; };
 		38F6A690190DE4A60040448B /* PosterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosterView.m; sourceTree = "<group>"; };
 		38F6A693190DE9510040448B /* landing.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = landing.pdf; sourceTree = "<group>"; };
@@ -113,6 +122,25 @@
 		38F6A6A6190DE9510040448B /* poster8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster8.png; sourceTree = "<group>"; };
 		38F6A6A7190DE9510040448B /* poster9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster9.png; sourceTree = "<group>"; };
 		38F6A6A8190DE9510040448B /* posters.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = posters.psd; sourceTree = "<group>"; };
+		E071DE7A19209EBA00079791 /* icons.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.psd; sourceTree = "<group>"; };
+		E071DE7B19209EBA00079791 /* not-seen-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-seen-filled.png"; sourceTree = "<group>"; };
+		E071DE7C19209EBA00079791 /* not-seen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-seen.png"; sourceTree = "<group>"; };
+		E071DE7D19209EBA00079791 /* thumb-avg-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-avg-filled.png"; sourceTree = "<group>"; };
+		E071DE7E19209EBA00079791 /* thumb-avg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-avg.png"; sourceTree = "<group>"; };
+		E071DE7F19209EBA00079791 /* thumb-down-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-down-filled.png"; sourceTree = "<group>"; };
+		E071DE8019209EBA00079791 /* thumb-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-down.png"; sourceTree = "<group>"; };
+		E071DE8119209EBA00079791 /* thumb-up-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-up-filled.png"; sourceTree = "<group>"; };
+		E071DE8219209EBA00079791 /* thumbs-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbs-up.png"; sourceTree = "<group>"; };
+		E071DED91922789D00079791 /* RecView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecView.xib; path = ../RecView.xib; sourceTree = "<group>"; };
+		E071DEDB1922796100079791 /* RecView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecView.h; path = ../RecView.h; sourceTree = "<group>"; };
+		E071DEDC1922796100079791 /* RecView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecView.m; path = ../RecView.m; sourceTree = "<group>"; };
+		E071DEDE1922E01700079791 /* large-poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "large-poster.jpg"; sourceTree = "<group>"; };
+		E0C6DE3D191C9F4E00740C1E /* MyMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMoviesViewController.h; sourceTree = "<group>"; };
+		E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMoviesViewController.m; sourceTree = "<group>"; };
+		E0C6DE40191CA37200740C1E /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		E0C6DE41191CA37200740C1E /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		E0C6DE44191CA67700740C1E /* MovieViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieViewCell.h; path = ../MovieViewCell.h; sourceTree = "<group>"; };
+		E0C6DE45191CA67700740C1E /* MovieViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieViewCell.m; path = ../MovieViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,21 +200,21 @@
 		38F6A654190C7C300040448B /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				E0C6DE43191CA37B00740C1E /* ViewControllers */,
 				38F6A65D190C7C300040448B /* AppDelegate.h */,
 				38F6A65E190C7C300040448B /* AppDelegate.m */,
+				E071DE7919209EBA00079791 /* glyphs */,
+				E0C6DE44191CA67700740C1E /* MovieViewCell.h */,
+				E071DEDE1922E01700079791 /* large-poster.jpg */,
+				E0C6DE45191CA67700740C1E /* MovieViewCell.m */,
+				E071DEDB1922796100079791 /* RecView.h */,
+				E071DEDC1922796100079791 /* RecView.m */,
+				E071DED91922789D00079791 /* RecView.xib */,
 				38F6A660190C7C300040448B /* Main_iPhone.storyboard */,
 				38F6A663190C7C300040448B /* Main_iPad.storyboard */,
-				38F6A666190C7C300040448B /* FirstViewController.h */,
-				38F6A667190C7C300040448B /* FirstViewController.m */,
-				38F6A669190C7C300040448B /* SecondViewController.h */,
-				38F6A66A190C7C300040448B /* SecondViewController.m */,
 				38F6A66C190C7C300040448B /* Images.xcassets */,
 				38F6A655190C7C300040448B /* Supporting Files */,
-				38F6A689190C7DDA0040448B /* Recs.h */,
 				38F6A692190DE9510040448B /* posters */,
-				38F6A68A190C7DDA0040448B /* Recs.m */,
-				38F6A68C190C7E410040448B /* Add.h */,
-				38F6A68D190C7E410040448B /* Add.m */,
 				38F6A68F190DE4A60040448B /* PosterView.h */,
 				38F6A690190DE4A60040448B /* PosterView.m */,
 			);
@@ -250,6 +278,38 @@
 				38F6A6A8190DE9510040448B /* posters.psd */,
 			);
 			path = posters;
+			sourceTree = "<group>";
+		};
+		E071DE7919209EBA00079791 /* glyphs */ = {
+			isa = PBXGroup;
+			children = (
+				E071DE7A19209EBA00079791 /* icons.psd */,
+				E071DE7B19209EBA00079791 /* not-seen-filled.png */,
+				E071DE7C19209EBA00079791 /* not-seen.png */,
+				E071DE7D19209EBA00079791 /* thumb-avg-filled.png */,
+				E071DE7E19209EBA00079791 /* thumb-avg.png */,
+				E071DE7F19209EBA00079791 /* thumb-down-filled.png */,
+				E071DE8019209EBA00079791 /* thumb-down.png */,
+				E071DE8119209EBA00079791 /* thumb-up-filled.png */,
+				E071DE8219209EBA00079791 /* thumbs-up.png */,
+			);
+			path = glyphs;
+			sourceTree = "<group>";
+		};
+		E0C6DE43191CA37B00740C1E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0C6DE40191CA37200740C1E /* StatsViewController.h */,
+				E0C6DE41191CA37200740C1E /* StatsViewController.m */,
+				E0C6DE3D191C9F4E00740C1E /* MyMoviesViewController.h */,
+				E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */,
+				38F6A689190C7DDA0040448B /* Recs.h */,
+				38F6A68A190C7DDA0040448B /* Recs.m */,
+				38F6A68C190C7E410040448B /* Add.h */,
+				38F6A68D190C7E410040448B /* Add.m */,
+			);
+			name = ViewControllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,15 +397,23 @@
 				38F6A6B8190DE9510040448B /* poster4.png in Resources */,
 				38F6A665190C7C300040448B /* Main_iPad.storyboard in Resources */,
 				3871CB03190F7FB1001D59B9 /* poster3.png in Resources */,
+				E071DEDA1922789D00079791 /* RecView.xib in Resources */,
 				38F6A6B4190DE9510040448B /* poster16.png in Resources */,
 				38F6A6B7190DE9510040448B /* poster2.png in Resources */,
 				38F6A6AD190DE9510040448B /* poster1.png in Resources */,
+				E071DE8B19209EBA00079791 /* thumbs-up.png in Resources */,
 				38F6A6BD190DE9510040448B /* poster9.png in Resources */,
+				E071DE8919209EBA00079791 /* thumb-down.png in Resources */,
 				38F6A6AF190DE9510040448B /* poster11.png in Resources */,
+				E071DE8A19209EBA00079791 /* thumb-up-filled.png in Resources */,
+				E071DE8719209EBA00079791 /* thumb-avg.png in Resources */,
 				38F6A6BB190DE9510040448B /* poster7.png in Resources */,
 				38F6A6B2190DE9510040448B /* poster14.png in Resources */,
 				38F6A6BC190DE9510040448B /* poster8.png in Resources */,
+				E071DE8419209EBA00079791 /* not-seen-filled.png in Resources */,
 				38F6A6AB190DE9510040448B /* landing3.pdf in Resources */,
+				E071DE8519209EBA00079791 /* not-seen.png in Resources */,
+				E071DEDF1922E01700079791 /* large-poster.jpg in Resources */,
 				38F6A6BE190DE9510040448B /* posters.psd in Resources */,
 				38F6A6AC190DE9510040448B /* poster0.png in Resources */,
 				38F6A6AE190DE9510040448B /* poster10.png in Resources */,
@@ -353,8 +421,11 @@
 				38F6A6B3190DE9510040448B /* poster15.png in Resources */,
 				38F6A6B5190DE9510040448B /* poster17.png in Resources */,
 				38F6A66D190C7C300040448B /* Images.xcassets in Resources */,
+				E071DE8819209EBA00079791 /* thumb-down-filled.png in Resources */,
+				E071DE8319209EBA00079791 /* icons.psd in Resources */,
 				38F6A6B9190DE9510040448B /* poster5.png in Resources */,
 				38F6A6AA190DE9510040448B /* landing.psd in Resources */,
+				E071DE8619209EBA00079791 /* thumb-avg-filled.png in Resources */,
 				38F6A662190C7C300040448B /* Main_iPhone.storyboard in Resources */,
 				38F6A659190C7C300040448B /* InfoPlist.strings in Resources */,
 				38F6A6BA190DE9510040448B /* poster6.png in Resources */,
@@ -378,10 +449,12 @@
 			files = (
 				38F6A68B190C7DDA0040448B /* Recs.m in Sources */,
 				38F6A691190DE4A60040448B /* PosterView.m in Sources */,
-				38F6A66B190C7C300040448B /* SecondViewController.m in Sources */,
+				E071DEDD1922796100079791 /* RecView.m in Sources */,
+				E0C6DE42191CA37200740C1E /* StatsViewController.m in Sources */,
+				E0C6DE46191CA67700740C1E /* MovieViewCell.m in Sources */,
+				E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */,
 				38F6A65F190C7C300040448B /* AppDelegate.m in Sources */,
 				38F6A68E190C7E410040448B /* Add.m in Sources */,
-				38F6A668190C7C300040448B /* FirstViewController.m in Sources */,
 				38F6A65B190C7C300040448B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

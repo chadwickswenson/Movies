@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface Recs : UIViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *recPages;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end

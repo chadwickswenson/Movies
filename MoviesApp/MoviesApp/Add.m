@@ -9,9 +9,15 @@
 #import "Add.h"
 #import "PosterView.h"
 
+
+
 #define ARC4RANDOM_MAX      0x100000000
 #define NUMMOVIES      20
 #define NUMMOVIESONSCREEN      10
+#define MIN_VELOCITY      600
+#define MOVIE_Y_POS      115
+#define MOVIE_X_POS      60
+#define ANI_BACK_TIME      0.5
 
 @interface Add ()
     @property (strong, nonatomic) NSMutableArray *stackArr;
@@ -33,7 +39,7 @@
     for(i = 0; i < NUMMOVIES;i++){
         
         
-        PosterView *movie = [[PosterView alloc] initWithFrame:CGRectMake(50, 100, 200, 300)];
+        PosterView *movie = [[PosterView alloc] initWithFrame:CGRectMake(MOVIE_X_POS, MOVIE_Y_POS, 200, 300)];
         movie.layer.zPosition = NUMMOVIES - i;
         CGRect frame = movie.frame;
         frame.origin.x = 300 - frame.size.width;
@@ -47,6 +53,7 @@
         double val = ((double)arc4random() / ARC4RANDOM_MAX)/10 - 0.05;
         
         [movie.img setTransform:CGAffineTransformMakeRotation(val)];
+        [movie.infoView setTransform:CGAffineTransformMakeRotation(val)];
         [self.stackArr addObject:movie];
         
     }
@@ -69,9 +76,13 @@
     }
     self.currentMovieIndex++;
 }
+- (void)nextMovieSteps:(CGFloat)vel {
+    
+}
 - (IBAction)dragAction:(UIPanGestureRecognizer *)sender {
     if(sender.state == UIGestureRecognizerStateBegan){
         self.fingerPos = [sender locationInView:self.view];
+        
     }
     else if(sender.state == UIGestureRecognizerStateChanged){
         
@@ -82,22 +93,30 @@
         
         [curMovie setFrame:CGRectMake(curMovie.frame.origin.x+newCoord.x-self.fingerPos.x, curMovie.frame.origin.y+newCoord.y-self.fingerPos.y, frame.size.width, frame.size.height)];
         self.fingerPos = [sender locationInView:self.view];
+        
+        self.thumbUpFilled.alpha = (MOVIE_Y_POS - curMovie.frame.origin.y)/(MOVIE_Y_POS-50);
+        self.thumbDownFilled.alpha = (curMovie.frame.origin.y - MOVIE_Y_POS)/(self.view.frame.size.height-300);
+        self.notSeenFilled.alpha = (MOVIE_X_POS - curMovie.frame.origin.x)/(MOVIE_X_POS+30);
+        self.thumbAvgFilled.alpha = (curMovie.frame.origin.x - MOVIE_X_POS)/(self.view.frame.size.width-100);
        
     }
-    else if(sender.state == UIGestureRecognizerStateEnded){
+    else if(sender.state == UIGestureRecognizerStateEnded){  //swipe done check if movie should fly
         PosterView *curMovie = self.stackArr[self.currentMovieIndex];
-        CGRect frame = curMovie.frame;
-        NSLog(@"x: %f", frame.origin.y);
-        if((frame.origin.y < - 50 && [sender velocityInView:sender.view].y < -600) || (frame.origin.y < -100)){
-            [self addNextMovie];
+        CGRect frame = curMovie.frame; //NSLog(@"x: %f", frame.origin.y);
+        
+        //Check if top
+        if((frame.origin.y < - 50 && [sender velocityInView:sender.view].y < -MIN_VELOCITY) || (frame.origin.y < -100)){
+            
+            [self addNextMovie]; //go to next movie as "active" movie
+            
             CGFloat yPoints = 640.0;
             
             CGFloat velocityY = [sender velocityInView:sender.view].y;
-            NSLog(@"%f", velocityY);
-            if(velocityY > -600){
-                velocityY = -600;
+            
+            if(velocityY > -MIN_VELOCITY){
+                velocityY = -MIN_VELOCITY;
             }
-            //NSLog(@"%f", velocityY);
+        
             NSTimeInterval duration = yPoints / velocityY;
             CGPoint offScreenCenter = curMovie.center;
             offScreenCenter.y -= yPoints;
@@ -105,52 +124,91 @@
                 curMovie.center = offScreenCenter;
             }];
             
-        }
-        else if((frame.origin.y > 190 && [sender velocityInView:sender.view].y > 600) || (frame.origin.y > 300)){
+            //set button color and animate back
+            self.thumbUpFilled.alpha = 1;
+            [UIView animateWithDuration:ANI_BACK_TIME animations:^{
+                self.thumbUpFilled.alpha = 0;
+                self.thumbAvgFilled.alpha = 0;
+                self.thumbDownFilled.alpha = 0;
+                self.notSeenFilled.alpha = 0;
+            }];
+            
+            
+        }//if bottom:
+        else if((frame.origin.y > 190 && [sender velocityInView:sender.view].y > MIN_VELOCITY) || (frame.origin.y > 300)){
             [self addNextMovie];
             CGFloat yPoints = 640.0;
             CGFloat velocityY = [sender velocityInView:sender.view].y;
-            if(velocityY < 600){
-                velocityY = 600;
+            
+            if(velocityY < MIN_VELOCITY){  //make sure velocity isnt butt slow
+                velocityY = MIN_VELOCITY;
             }
-            NSLog(@"%f", velocityY);
+            
             NSTimeInterval duration = yPoints / velocityY;
             CGPoint offScreenCenter = curMovie.center;
+            
             offScreenCenter.y += yPoints;
+            
             [UIView animateWithDuration:duration animations:^{
                 curMovie.center = offScreenCenter;
             }];
+            
+            self.thumbDownFilled.alpha = 1;
+            [UIView animateWithDuration:ANI_BACK_TIME animations:^{
+                self.thumbUpFilled.alpha = 0;
+                self.thumbAvgFilled.alpha = 0;
+                self.thumbDownFilled.alpha = 0;
+                self.notSeenFilled.alpha = 0;
+            }];
         }
-        else if((frame.origin.x > 150 && [sender velocityInView:sender.view].x > 600) || (frame.origin.x > 350)){
+        else if((frame.origin.x > 150 && [sender velocityInView:sender.view].x > MIN_VELOCITY) || (frame.origin.x > 350)){
+            
             [self addNextMovie];
+            
             CGFloat xPoints = 620.0;
             CGFloat velocityX = [sender velocityInView:sender.view].x;
-            if(velocityX < 600){
-                velocityX = 600;
+            
+            if(velocityX < MIN_VELOCITY){
+                velocityX = MIN_VELOCITY;
             }
-            NSLog(@"%f", velocityX);
-            NSLog(@"%f", frame.origin.x);
+         
             NSTimeInterval duration = xPoints / velocityX;
             CGPoint offScreenCenter = curMovie.center;
             offScreenCenter.x += xPoints;
             [UIView animateWithDuration:duration animations:^{
                 curMovie.center = offScreenCenter;
             }];
+            
+            self.thumbAvgFilled.alpha = 1;
+            [UIView animateWithDuration:ANI_BACK_TIME animations:^{
+                self.thumbUpFilled.alpha = 0;
+                self.thumbAvgFilled.alpha = 0;
+                self.thumbDownFilled.alpha = 0;
+                self.notSeenFilled.alpha = 0;
+            }];
         }
-        else if((frame.origin.x < -70 && [sender velocityInView:sender.view].x < -600) || (frame.origin.x < -120)){
+        else if((frame.origin.x < -70 && [sender velocityInView:sender.view].x < -MIN_VELOCITY) || (frame.origin.x < -120)){
             [self addNextMovie];
             CGFloat xPoints = 620.0;
             CGFloat velocityX = [sender velocityInView:sender.view].x;
-            if(velocityX > -600){
-                velocityX = -600;
+            
+            if(velocityX > -MIN_VELOCITY){
+                velocityX = -MIN_VELOCITY;
             }
-            NSLog(@"%f", velocityX);
-            NSLog(@"%f", frame.origin.x);
+        
             NSTimeInterval duration = xPoints / velocityX;
             CGPoint offScreenCenter = curMovie.center;
             offScreenCenter.x -= xPoints;
             [UIView animateWithDuration:duration animations:^{
                 curMovie.center = offScreenCenter;
+            }];
+            
+            self.notSeenFilled.alpha = 1;
+            [UIView animateWithDuration:ANI_BACK_TIME animations:^{
+                self.thumbUpFilled.alpha = 0;
+                self.thumbAvgFilled.alpha = 0;
+                self.thumbDownFilled.alpha = 0;
+                self.notSeenFilled.alpha = 0;
             }];
         }
         else{
@@ -158,10 +216,16 @@
                               delay: 0
                             options: UIViewAnimationOptionCurveLinear
                          animations:^{
-                             curMovie.frame = CGRectMake(50, 100, curMovie.frame.size.width, curMovie.frame.size.height);
+                             curMovie.frame = CGRectMake(MOVIE_X_POS, MOVIE_Y_POS, curMovie.frame.size.width, curMovie.frame.size.height);
 
                          }
                          completion:nil];
+            [UIView animateWithDuration:1 animations:^{
+                self.thumbUpFilled.alpha = 0;
+                self.thumbAvgFilled.alpha = 0;
+                self.thumbDownFilled.alpha = 0;
+                self.notSeenFilled.alpha = 0;
+            }];
         }
     }
 }
@@ -174,9 +238,21 @@
     self.stackArr = [[NSMutableArray alloc] init];
     [self loadMovies];
     [self initMoviesToView];
+    [self setZIndexes];
+    [UITabBarItem.appearance setTitleTextAttributes:@{
+                                                      UITextAttributeTextColor : [UIColor colorWithRed:255 green:255 blue:255 alpha:1] } forState:UIControlStateNormal];
 
 }
-
+- (void)setZIndexes{
+    self.thumbAvg.layer.zPosition = 10000;
+    self.thumbUp.layer.zPosition = 10000;
+    self.thumbUpFilled.layer.zPosition = 10000;
+    self.thumbAvgFilled.layer.zPosition = 10000;
+    self.thumbDown.layer.zPosition = 10000;
+    self.thumbDownFilled.layer.zPosition = 10000;
+    self.notSeen.layer.zPosition = 10000;
+    self.notSeenFilled.layer.zPosition = 10000;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

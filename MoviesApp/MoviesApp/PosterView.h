@@ -15,5 +15,6 @@
 @property (strong, nonatomic) UIImageView *img;
 @property (strong, nonatomic) UILabel *title;
 @property (strong, nonatomic) UILabel *year;
+@property (strong, nonatomic) UIView *infoView;
 
 @end
