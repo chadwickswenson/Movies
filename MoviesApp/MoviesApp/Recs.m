@@ -38,12 +38,17 @@
     CGRect f = view2.frame;
     f.origin.x = 320;
     view2.frame = f;
+    CGRect f2 = view.frame;
+    f2.origin.y = -25;
+    view.frame = f2;
+    
+    /*CGSize scrollableSize = CGSizeMake(320, 628);
+    [self.recPages setContentSize:scrollableSize];*/
     
     [self.recPages addSubview:view];
     [self.recPages addSubview:view2];
     
     self.recPages.contentSize = CGSizeMake(640, self.view.frame.size.height);
-    
     
     
    /* CGRect f = self.recPages.frame;
@@ -52,13 +57,22 @@
     
     
 }
-
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)scrollViewDidScroll:(UIScrollView *)sender
+{
+    // Update the page when more than 50% of the previous/next page is visible
+    CGFloat pageWidth = self.recPages.frame.size.width;
+    int page = floor((self.recPages.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    self.pageControl.currentPage = page;
+}
 /*
 #pragma mark - Navigation
 

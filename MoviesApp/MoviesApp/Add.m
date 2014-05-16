@@ -243,6 +243,11 @@
                                                       UITextAttributeTextColor : [UIColor colorWithRed:255 green:255 blue:255 alpha:1] } forState:UIControlStateNormal];
 
 }
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)setZIndexes{
     self.thumbAvg.layer.zPosition = 10000;
     self.thumbUp.layer.zPosition = 10000;

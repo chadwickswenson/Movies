@@ -59,6 +59,7 @@
 		E071DEDA1922789D00079791 /* RecView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E071DED91922789D00079791 /* RecView.xib */; };
 		E071DEDD1922796100079791 /* RecView.m in Sources */ = {isa = PBXBuildFile; fileRef = E071DEDC1922796100079791 /* RecView.m */; };
 		E071DEDF1922E01700079791 /* large-poster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E071DEDE1922E01700079791 /* large-poster.jpg */; };
+		E071DEE11923402000079791 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DEE01923402000079791 /* overlay.png */; };
 		E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */; };
 		E0C6DE42191CA37200740C1E /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE41191CA37200740C1E /* StatsViewController.m */; };
 		E0C6DE46191CA67700740C1E /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE45191CA67700740C1E /* MovieViewCell.m */; };
@@ -135,6 +136,7 @@
 		E071DEDB1922796100079791 /* RecView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecView.h; path = ../RecView.h; sourceTree = "<group>"; };
 		E071DEDC1922796100079791 /* RecView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecView.m; path = ../RecView.m; sourceTree = "<group>"; };
 		E071DEDE1922E01700079791 /* large-poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "large-poster.jpg"; sourceTree = "<group>"; };
+		E071DEE01923402000079791 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overlay.png; path = MoviesApp/overlay.png; sourceTree = "<group>"; };
 		E0C6DE3D191C9F4E00740C1E /* MyMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMoviesViewController.h; sourceTree = "<group>"; };
 		E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMoviesViewController.m; sourceTree = "<group>"; };
 		E0C6DE40191CA37200740C1E /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				38F6A65E190C7C300040448B /* AppDelegate.m */,
 				E071DE7919209EBA00079791 /* glyphs */,
 				E0C6DE44191CA67700740C1E /* MovieViewCell.h */,
+				E071DEE21923406E00079791 /* assets */,
 				E071DEDE1922E01700079791 /* large-poster.jpg */,
 				E0C6DE45191CA67700740C1E /* MovieViewCell.m */,
 				E071DEDB1922796100079791 /* RecView.h */,
@@ -294,6 +297,15 @@
 				E071DE8219209EBA00079791 /* thumbs-up.png */,
 			);
 			path = glyphs;
+			sourceTree = "<group>";
+		};
+		E071DEE21923406E00079791 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				E071DEE01923402000079791 /* overlay.png */,
+			);
+			name = assets;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E0C6DE43191CA37B00740C1E /* ViewControllers */ = {
@@ -412,6 +424,7 @@
 				38F6A6BC190DE9510040448B /* poster8.png in Resources */,
 				E071DE8419209EBA00079791 /* not-seen-filled.png in Resources */,
 				38F6A6AB190DE9510040448B /* landing3.pdf in Resources */,
+				E071DEE11923402000079791 /* overlay.png in Resources */,
 				E071DE8519209EBA00079791 /* not-seen.png in Resources */,
 				E071DEDF1922E01700079791 /* large-poster.jpg in Resources */,
 				38F6A6BE190DE9510040448B /* posters.psd in Resources */,
