@@ -14,7 +14,7 @@
 #define ARC4RANDOM_MAX      0x100000000
 #define NUMMOVIES      20
 #define NUMMOVIESONSCREEN      10
-#define MIN_VELOCITY      600
+#define MIN_VELOCITY      400
 #define MOVIE_Y_POS      115
 #define MOVIE_X_POS      60
 #define ANI_BACK_TIME      0.5
@@ -37,7 +37,6 @@
     int i = 0;
     
     for(i = 0; i < NUMMOVIES;i++){
-        
         
         PosterView *movie = [[PosterView alloc] initWithFrame:CGRectMake(MOVIE_X_POS, MOVIE_Y_POS, 200, 300)];
         movie.layer.zPosition = NUMMOVIES - i;

@@ -8,6 +8,8 @@
 
 #import "Recs.h"
 #import "RecView.h"
+#import <QuartzCore/QuartzCore.h>
+#import "RecSettingsViewController.h"
 
 @interface Recs ()
 
@@ -48,7 +50,11 @@
     [self.recPages addSubview:view];
     [self.recPages addSubview:view2];
     
-    self.recPages.contentSize = CGSizeMake(640, self.view.frame.size.height);
+    self.recPages.contentSize = CGSizeMake(640, 455);
+    //self.recPages.contentSize = CGSizeMake(self.recPages.contentSize.width,self.recPages.frame.size.height);
+    
+
+    
     
     
    /* CGRect f = self.recPages.frame;
@@ -57,6 +63,31 @@
     
     
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"settingsTransitions"])
+    {
+        
+        
+        UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+        CGRect rect = [keyWindow bounds];
+        UIGraphicsBeginImageContextWithOptions(rect.size,YES,0.0f);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        [keyWindow.layer renderInContext:context];
+        UIImage *capturedScreen = UIGraphicsGetImageFromCurrentImageContext();
+        
+        RecSettingsViewController *vc = [segue destinationViewController];
+        
+        vc.bgImage = capturedScreen;
+        
+        NSLog(@"hi2");
+        UIGraphicsEndImageContext();
+        
+        
+    }
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
@@ -72,6 +103,8 @@
     CGFloat pageWidth = self.recPages.frame.size.width;
     int page = floor((self.recPages.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     self.pageControl.currentPage = page;
+    
+    
 }
 /*
 #pragma mark - Navigation

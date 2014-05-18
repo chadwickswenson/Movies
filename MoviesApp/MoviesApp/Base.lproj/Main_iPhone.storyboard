@@ -73,12 +73,12 @@
                         <viewControllerLayoutGuide type="top" id="elR-b6-Bp0"/>
                         <viewControllerLayoutGuide type="bottom" id="PAy-3J-96Z"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="X5O-pa-Iih">
+                    <view key="view" contentMode="TopLeft" id="X5O-pa-Iih">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" fixedFrame="YES" directionalLockEnabled="YES" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-ce-kC1">
-                                <rect key="frame" x="0.0" y="0.0" width="321" height="628"/>
+                                <rect key="frame" x="0.0" y="0.0" width="321" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="0.087918893920000005" blue="0.1920132866" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -93,7 +93,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="91C-mK-Ei7">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="eyt-n2-NMA"/>
+                        <barButtonItem key="rightBarButtonItem" image="settingsNew.png" id="eyt-n2-NMA">
+                            <inset key="imageInsets" minX="-10" minY="0.0" maxX="10" maxY="0.0"/>
+                            <connections>
+                                <segue destination="ePD-fD-b1V" kind="modal" identifier="settingsTransitions" modalTransitionStyle="crossDissolve" id="tKd-8z-Ti8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="pageControl" destination="iFw-MJ-SsN" id="Dti-e5-qjt"/>
@@ -122,6 +127,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wB1-2B-cNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3421" y="-3575"/>
+        </scene>
+        <!--Rec Settings View Controller-->
+        <scene sceneID="YPk-wc-ryd">
+            <objects>
+                <viewController id="ePD-fD-b1V" customClass="RecSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cMm-Iw-2TM"/>
+                        <viewControllerLayoutGuide type="bottom" id="RU3-u2-7Zj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eiw-Wt-K1B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OH8-FG-oGy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CIp-B7-6yt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0Y-46-A0v">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lun-7b-iao">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fw-5G-W75">
+                                        <rect key="frame" x="124" y="502" width="172" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.12533925664480453" green="0.82214604591836737" blue="0.33499347308963667" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Submit &amp; Update">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIK-FR-W4e">
+                                        <rect key="frame" x="25" y="502" width="91" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="cancel">
+                                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleCancelClick:" destination="ePD-fD-b1V" eventType="touchUpInside" id="zCI-cd-pAp"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zt4-lU-Ycj">
+                                        <rect key="frame" x="238" y="132" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best Match Any Genre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAT-4C-pb9">
+                                        <rect key="frame" x="35" y="137" width="173" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oD9-Uc-E3J">
+                                        <rect key="frame" x="238" y="80" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Netflix Movies Only" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1x-Av-Z37">
+                                        <rect key="frame" x="35" y="85" width="148" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="CIp-B7-6yt" id="tHQ-Zu-rDU"/>
+                        <outlet property="backgroundImageViewNotBlurred" destination="OH8-FG-oGy" id="op5-cc-du6"/>
+                        <outlet property="cancelButton" destination="wIK-FR-W4e" id="FeP-cy-qZ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2GX-9A-QSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3925" y="-3575"/>
         </scene>
         <!--Add - Add Movies-->
         <scene sceneID="0Lh-mR-mlh">
@@ -174,7 +267,7 @@
                             <outletCollection property="gestureRecognizers" destination="nzq-h8-PPH" appends="YES" id="m9j-o3-EfP"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Movies" image="first" id="OQi-Pl-pOP"/>
+                    <tabBarItem key="tabBarItem" title="Add Movies" image="add3.png" id="OQi-Pl-pOP"/>
                     <navigationItem key="navigationItem" id="G59-K7-c3N"/>
                     <connections>
                         <outlet property="notSeen" destination="kNA-Gt-T5V" id="ia4-d9-ByR"/>
@@ -208,7 +301,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.85882359743118286" green="0.85882359743118286" blue="0.85882359743118286" alpha="1" colorSpace="deviceRGB"/>
                         <color key="barTintColor" white="0.050000000000000003" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" red="1" green="0.087918893920000005" blue="0.1920132866" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.91386320153061229" green="0.13077457593612579" blue="0.1993972251704399" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="mmI-Lc-1RV" kind="relationship" relationship="viewControllers" id="Jno-Xa-5BI"/>
@@ -293,9 +386,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add3.png" width="48" height="32"/>
         <image name="first" width="30" height="30"/>
         <image name="not-seen-filled.png" width="111" height="111"/>
         <image name="not-seen.png" width="111" height="111"/>
+        <image name="settingsNew.png" width="44" height="44"/>
         <image name="thumb-avg-filled.png" width="111" height="111"/>
         <image name="thumb-avg.png" width="111" height="111"/>
         <image name="thumb-down-filled.png" width="111" height="111"/>
