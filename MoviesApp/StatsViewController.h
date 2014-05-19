@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StatsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *chartScrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *chartsPageControl;
 
 @end

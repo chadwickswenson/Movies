@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RecView : UIView
+@property (weak, nonatomic) IBOutlet UIImageView *movieBgImageView;
 
 @end

@@ -39,11 +39,14 @@
     
     CGRect f = view2.frame;
     f.origin.x = 320;
+    f.origin.y = -25;
     view2.frame = f;
     CGRect f2 = view.frame;
     f2.origin.y = -25;
+    f2.origin.x = -1;
     view.frame = f2;
     
+    [view2.movieBgImageView setImage:[UIImage imageNamed: @"large-poster.jpg"]];
     /*CGSize scrollableSize = CGSizeMake(320, 628);
     [self.recPages setContentSize:scrollableSize];*/
     
@@ -81,7 +84,7 @@
         
         vc.bgImage = capturedScreen;
         
-        NSLog(@"hi2");
+        
         UIGraphicsEndImageContext();
         
         
@@ -103,7 +106,6 @@
     CGFloat pageWidth = self.recPages.frame.size.width;
     int page = floor((self.recPages.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     self.pageControl.currentPage = page;
-    
     
 }
 /*

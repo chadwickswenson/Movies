@@ -54,6 +54,9 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="movieBgImageView" destination="1cN-FM-2Ce" id="wWZ-Ca-EvG"/>
+            </connections>
         </view>
     </objects>
     <resources>

@@ -67,6 +67,8 @@
 		E09F5F66192849BF00FC2A4F /* setting5.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F65192849BF00FC2A4F /* setting5.png */; };
 		E09F5F6C192854AB00FC2A4F /* add3.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F6B192854AB00FC2A4F /* add3.png */; };
 		E09F5F6E192856F300FC2A4F /* settingsNew.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F6D192856F300FC2A4F /* settingsNew.png */; };
+		E09F5F7019296D6E00FC2A4F /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F6F19296D6E00FC2A4F /* ChartView.xib */; };
+		E09F5F74192972A000FC2A4F /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F73192972A000FC2A4F /* ChartView.m */; };
 		E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */; };
 		E0C6DE42191CA37200740C1E /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE41191CA37200740C1E /* StatsViewController.m */; };
 		E0C6DE46191CA67700740C1E /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE45191CA67700740C1E /* MovieViewCell.m */; };
@@ -142,7 +144,7 @@
 		E071DED91922789D00079791 /* RecView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecView.xib; path = ../RecView.xib; sourceTree = "<group>"; };
 		E071DEDB1922796100079791 /* RecView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecView.h; path = ../RecView.h; sourceTree = "<group>"; };
 		E071DEDC1922796100079791 /* RecView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecView.m; path = ../RecView.m; sourceTree = "<group>"; };
-		E071DEDE1922E01700079791 /* large-poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "large-poster.jpg"; sourceTree = "<group>"; };
+		E071DEDE1922E01700079791 /* large-poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "large-poster.jpg"; path = "MoviesApp/large-poster.jpg"; sourceTree = "<group>"; };
 		E071DEE01923402000079791 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overlay.png; path = MoviesApp/overlay.png; sourceTree = "<group>"; };
 		E09F5F541925D0E500FC2A4F /* RecSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecSettingsViewController.h; sourceTree = "<group>"; };
 		E09F5F551925D0E500FC2A4F /* RecSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecSettingsViewController.m; sourceTree = "<group>"; };
@@ -152,6 +154,9 @@
 		E09F5F65192849BF00FC2A4F /* setting5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting5.png; sourceTree = "<group>"; };
 		E09F5F6B192854AB00FC2A4F /* add3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add3.png; sourceTree = "<group>"; };
 		E09F5F6D192856F300FC2A4F /* settingsNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsNew.png; sourceTree = "<group>"; };
+		E09F5F6F19296D6E00FC2A4F /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChartView.xib; path = ../ChartView.xib; sourceTree = "<group>"; };
+		E09F5F72192972A000FC2A4F /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		E09F5F73192972A000FC2A4F /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
 		E0C6DE3D191C9F4E00740C1E /* MyMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMoviesViewController.h; sourceTree = "<group>"; };
 		E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMoviesViewController.m; sourceTree = "<group>"; };
 		E0C6DE40191CA37200740C1E /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
@@ -217,24 +222,21 @@
 		38F6A654190C7C300040448B /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				E09F5F711929725300FC2A4F /* Views */,
 				E0C6DE43191CA37B00740C1E /* ViewControllers */,
 				38F6A65D190C7C300040448B /* AppDelegate.h */,
 				38F6A65E190C7C300040448B /* AppDelegate.m */,
 				E071DE7919209EBA00079791 /* glyphs */,
-				E0C6DE44191CA67700740C1E /* MovieViewCell.h */,
 				E071DEE21923406E00079791 /* assets */,
-				E071DEDE1922E01700079791 /* large-poster.jpg */,
+				E0C6DE44191CA67700740C1E /* MovieViewCell.h */,
 				E0C6DE45191CA67700740C1E /* MovieViewCell.m */,
-				E071DEDB1922796100079791 /* RecView.h */,
-				E071DEDC1922796100079791 /* RecView.m */,
+				E09F5F6F19296D6E00FC2A4F /* ChartView.xib */,
 				E071DED91922789D00079791 /* RecView.xib */,
 				38F6A660190C7C300040448B /* Main_iPhone.storyboard */,
 				38F6A663190C7C300040448B /* Main_iPad.storyboard */,
 				38F6A66C190C7C300040448B /* Images.xcassets */,
 				38F6A655190C7C300040448B /* Supporting Files */,
 				38F6A692190DE9510040448B /* posters */,
-				38F6A68F190DE4A60040448B /* PosterView.h */,
-				38F6A690190DE4A60040448B /* PosterView.m */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -321,12 +323,26 @@
 		E071DEE21923406E00079791 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				E071DEDE1922E01700079791 /* large-poster.jpg */,
 				E09F5F5919283F1200FC2A4F /* overlay2.png */,
 				E09F5F57192823F200FC2A4F /* frozenBigPoster.png */,
 				E071DEE01923402000079791 /* overlay.png */,
 			);
 			name = assets;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		E09F5F711929725300FC2A4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E071DEDB1922796100079791 /* RecView.h */,
+				E071DEDC1922796100079791 /* RecView.m */,
+				38F6A68F190DE4A60040448B /* PosterView.h */,
+				38F6A690190DE4A60040448B /* PosterView.m */,
+				E09F5F72192972A000FC2A4F /* ChartView.h */,
+				E09F5F73192972A000FC2A4F /* ChartView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E0C6DE43191CA37B00740C1E /* ViewControllers */ = {
@@ -463,6 +479,7 @@
 				E09F5F641928497900FC2A4F /* settings4.png in Resources */,
 				E071DE8819209EBA00079791 /* thumb-down-filled.png in Resources */,
 				E071DE8319209EBA00079791 /* icons.psd in Resources */,
+				E09F5F7019296D6E00FC2A4F /* ChartView.xib in Resources */,
 				E09F5F6E192856F300FC2A4F /* settingsNew.png in Resources */,
 				38F6A6B9190DE9510040448B /* poster5.png in Resources */,
 				38F6A6AA190DE9510040448B /* landing.psd in Resources */,
@@ -499,6 +516,7 @@
 				38F6A65F190C7C300040448B /* AppDelegate.m in Sources */,
 				38F6A68E190C7E410040448B /* Add.m in Sources */,
 				38F6A65B190C7C300040448B /* main.m in Sources */,
+				E09F5F74192972A000FC2A4F /* ChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
