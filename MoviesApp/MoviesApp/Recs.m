@@ -10,6 +10,8 @@
 #import "RecView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "RecSettingsViewController.h"
+#import "RatingViewController.h"
+
 
 @interface Recs ()
 
@@ -55,10 +57,10 @@
     
     self.recPages.contentSize = CGSizeMake(640, 455);
     //self.recPages.contentSize = CGSizeMake(self.recPages.contentSize.width,self.recPages.frame.size.height);
-    
 
-    
-    
+   
+     [view.seenButton addTarget:self action:@selector(seenItClick) forControlEvents:UIControlEventTouchUpInside];
+    [view2.seenButton addTarget:self action:@selector(seenItClick) forControlEvents:UIControlEventTouchUpInside];
     
    /* CGRect f = self.recPages.frame;
     f.origin.y = 100; // new x
@@ -66,13 +68,27 @@
     
     
 }
+- (void)seenItClick {
+    RatingViewController *new = (RatingViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"ratingMenu"];
+    //menu is only an example
+    new.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    CGRect rect = [keyWindow bounds];
+    UIGraphicsBeginImageContextWithOptions(rect.size,YES,0.0f);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [keyWindow.layer renderInContext:context];
+    UIImage *capturedScreen = UIGraphicsGetImageFromCurrentImageContext();
+    
+    new.screenImage =capturedScreen;
+    
+    [self presentViewController:new animated:YES completion:nil];
+}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
     if ([[segue identifier] isEqualToString:@"settingsTransitions"])
     {
-        
-        
         UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
         CGRect rect = [keyWindow bounds];
         UIGraphicsBeginImageContextWithOptions(rect.size,YES,0.0f);
@@ -87,14 +103,10 @@
         
         UIGraphicsEndImageContext();
         
-        
     }
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

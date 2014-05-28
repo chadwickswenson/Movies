@@ -18,7 +18,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.41187219759999999" green="0.82214604589999996" blue="0.49395350300000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.30555980388921267" green="0.2316825514903115" blue="0.73754384566326525" alpha="1" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>

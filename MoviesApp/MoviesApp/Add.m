@@ -8,7 +8,7 @@
 
 #import "Add.h"
 #import "PosterView.h"
-
+#import <POP/POP.h>
 
 
 #define ARC4RANDOM_MAX      0x100000000
@@ -104,7 +104,7 @@
         CGRect frame = curMovie.frame; //NSLog(@"x: %f", frame.origin.y);
         
         //Check if top
-        if((frame.origin.y < - 50 && [sender velocityInView:sender.view].y < -MIN_VELOCITY) || (frame.origin.y < -100)){
+        if((frame.origin.y < 40 && [sender velocityInView:sender.view].y < -MIN_VELOCITY) || (frame.origin.y < -100)){
             
             [self addNextMovie]; //go to next movie as "active" movie
             
@@ -159,7 +159,7 @@
                 self.thumbDownFilled.alpha = 0;
                 self.notSeenFilled.alpha = 0;
             }];
-        }
+        }//right:
         else if((frame.origin.x > 150 && [sender velocityInView:sender.view].x > MIN_VELOCITY) || (frame.origin.x > 350)){
             
             [self addNextMovie];
@@ -185,8 +185,8 @@
                 self.thumbDownFilled.alpha = 0;
                 self.notSeenFilled.alpha = 0;
             }];
-        }
-        else if((frame.origin.x < -70 && [sender velocityInView:sender.view].x < -MIN_VELOCITY) || (frame.origin.x < -120)){
+        }//left:
+        else if((frame.origin.x < 30 && [sender velocityInView:sender.view].x < -MIN_VELOCITY) || (frame.origin.x < -120)){
             [self addNextMovie];
             CGFloat xPoints = 620.0;
             CGFloat velocityX = [sender velocityInView:sender.view].x;
@@ -211,7 +211,18 @@
             }];
         }
         else{
-            [UIView animateWithDuration:0.3
+            
+            POPSpringAnimation *button1Animation = [POPSpringAnimation animation];
+            button1Animation.property = [POPAnimatableProperty propertyWithName:kPOPLayerPosition];
+            
+            button1Animation.toValue = [NSValue valueWithCGPoint:CGPointMake(MOVIE_X_POS+100, MOVIE_Y_POS+150)];
+            
+            button1Animation.springBounciness = 12.0;
+            button1Animation.springSpeed = 10.0;
+            
+            [curMovie.layer pop_addAnimation:button1Animation forKey:@"back"];
+            
+            /*[UIView animateWithDuration:0.3
                               delay: 0
                             options: UIViewAnimationOptionCurveLinear
                          animations:^{
@@ -224,7 +235,7 @@
                 self.thumbAvgFilled.alpha = 0;
                 self.thumbDownFilled.alpha = 0;
                 self.notSeenFilled.alpha = 0;
-            }];
+            }];*/
         }
     }
 }
@@ -239,13 +250,10 @@
     [self initMoviesToView];
     [self setZIndexes];
     [UITabBarItem.appearance setTitleTextAttributes:@{
-                                                      UITextAttributeTextColor : [UIColor colorWithRed:255 green:255 blue:255 alpha:1] } forState:UIControlStateNormal];
+                                                      UITextAttributeTextColor : [UIColor colorWithRed:40/255 green:55/255 blue:55/255 alpha:1] } forState:UIControlStateNormal];
 
 }
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+
 
 - (void)setZIndexes{
     self.thumbAvg.layer.zPosition = 10000;

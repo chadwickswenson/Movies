@@ -7,6 +7,7 @@
 //
 
 #import "RecView.h"
+#import "RatingViewController.h"
 
 @implementation RecView
 
@@ -27,5 +28,7 @@
     // Drawing code
 }
 */
+
+
 
 @end

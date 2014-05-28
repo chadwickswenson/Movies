@@ -10,5 +10,7 @@
 
 @interface RecView : UIView
 @property (weak, nonatomic) IBOutlet UIImageView *movieBgImageView;
+@property (weak, nonatomic) IBOutlet UIButton *seenButton;
+@property (weak, nonatomic) IBOutlet UIButton *notInterestedButton;
 
 @end
