@@ -12,5 +12,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *movieBgImageView;
 @property (weak, nonatomic) IBOutlet UIButton *seenButton;
 @property (weak, nonatomic) IBOutlet UIButton *notInterestedButton;
+@property (weak, nonatomic) IBOutlet UIView *titleBgView;
+@property (weak, nonatomic) IBOutlet UIImageView *titleBgImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *buttonBgImageView;
 
 @end

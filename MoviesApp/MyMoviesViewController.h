@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MyMoviesViewController : UICollectionViewController
+@property (strong, nonatomic) IBOutlet UICollectionView *moviesCollectionView;
 
 @end

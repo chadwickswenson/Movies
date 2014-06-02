@@ -11,7 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "RecSettingsViewController.h"
 #import "RatingViewController.h"
-
+#import "HelperObject.h"
 
 @interface Recs ()
 
@@ -45,7 +45,7 @@
     view2.frame = f;
     CGRect f2 = view.frame;
     f2.origin.y = -25;
-    f2.origin.x = -1;
+    f2.origin.x = 0;
     view.frame = f2;
     
     [view2.movieBgImageView setImage:[UIImage imageNamed: @"large-poster.jpg"]];
@@ -57,8 +57,12 @@
     
     self.recPages.contentSize = CGSizeMake(640, 455);
     //self.recPages.contentSize = CGSizeMake(self.recPages.contentSize.width,self.recPages.frame.size.height);
-
-   
+    UIImage *topImage = [HelperObject bgblur:[UIImage imageNamed: @"frozenBigPoster"]];//:
+    
+    [view.titleBgImageView setImage:topImage];
+    [view.buttonBgImageView setImage:topImage];
+    
+   //view.buttonBgImageView.contentMode = UIViewContentModeScaleAspectFill;
      [view.seenButton addTarget:self action:@selector(seenItClick) forControlEvents:UIControlEventTouchUpInside];
     [view2.seenButton addTarget:self action:@selector(seenItClick) forControlEvents:UIControlEventTouchUpInside];
     

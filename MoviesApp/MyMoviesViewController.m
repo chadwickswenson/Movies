@@ -8,14 +8,18 @@
 
 #import "MyMoviesViewController.h"
 #import "MovieViewCell.h"
+#import "HelperObject.h"
 
-@interface MyMoviesViewController (){
-     NSArray *moviePosters;
-}
+@interface MyMoviesViewController ()
+    @property (nonatomic) NSArray *moviePosters;
+    @property (nonatomic) int currentMovieIndex;
+    @property (nonatomic) int cardState;
 
 @end
 
-@implementation MyMoviesViewController
+@implementation MyMoviesViewController{
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,8 +34,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.cardState = 0;
     self.navigationItem.title = @"My Movies";
-    moviePosters = [NSArray arrayWithObjects:@"poster0",@"poster1",@"poster2",@"poster3",@"poster3",@"poster4",@"poster6",@"poster7",@"poster8",@"poster10",@"poster3",@"poster10",@"poster3",@"poster10",@"poster3",@"poster10",@"poster3",@"poster10",@"poster3",@"poster10",@"poster3", nil];
+    self.moviePosters = [NSArray arrayWithObjects:@"poster0",@"poster1",@"poster2",@"poster3",@"poster3",@"poster4",@"poster6",@"poster7",@"poster8",@"poster10",@"poster3",@"poster10",@"poster3",@"poster10",@"poster3",@"poster10",@"poster3",@"poster10",@"poster3",@"poster10",@"poster3", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,9 +45,19 @@
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return moviePosters.count;
+    return self.moviePosters.count;
 }
 
+- (IBAction)toggleCardStateHandler:(id)sender {
+    if(self.cardState == 0){
+        self.cardState = 1;
+    }
+    else{
+        self.cardState = 0;
+    }
+    
+    [self.moviesCollectionView reloadData];
+}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -50,10 +65,20 @@
     
     MovieViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    cell.posterImageView.image = [UIImage imageNamed:[moviePosters objectAtIndex:indexPath.row]];
+    cell.posterImageView.image = [UIImage imageNamed:[self.moviePosters objectAtIndex:indexPath.row]];
     
     cell.titleLabel.text = @"Lord of the Rings: The Fellowship of the Ring";
     
+    //cell.posterImageView.image = [HelperObject bgblur:[UIImage imageNamed:[self.moviePosters objectAtIndex:indexPath.row]]];
+    cell.posterImageView.image = [UIImage imageNamed:[self.moviePosters objectAtIndex:indexPath.row]];
+    if(self.cardState == 0){
+        cell.descCardView.alpha = 0;
+        //cell.posterImageView.image = [UIImage imageNamed:[self.moviePosters objectAtIndex:indexPath.row]];
+        
+    }else{
+        cell.descCardView.alpha = 1;
+        
+    }
     return cell;
 }
 /*

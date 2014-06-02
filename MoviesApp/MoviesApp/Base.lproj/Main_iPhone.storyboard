@@ -11,44 +11,50 @@
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="A3b-1D-AeB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.8901960784313725" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SZQ-rI-bNQ">
-                            <size key="itemSize" width="100" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="3" id="SZQ-rI-bNQ">
+                            <size key="itemSize" width="104" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="9m6-f7-6Jz" customClass="MovieViewCell">
-                                <rect key="frame" x="0.0" y="64" width="100" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="104" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="104" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1SC-eP-sVr">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="106" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eil-kO-Nik">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="138"/>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ER-QR-Gvx">
+                                            <rect key="frame" x="0.0" y="0.0" width="106" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" minimumFontSize="11" preferredMaxLayoutWidth="84" translatesAutoresizingMaskIntoConstraints="NO" id="SNH-DV-aRH">
-                                                    <rect key="frame" x="8" y="7" width="84" height="111"/>
+                                                <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eil-kO-Nik">
+                                                    <rect key="frame" x="0.0" y="-2" width="106" height="152"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" minimumFontSize="11" preferredMaxLayoutWidth="84" translatesAutoresizingMaskIntoConstraints="NO" id="SNH-DV-aRH">
+                                                    <rect key="frame" x="8" y="12" width="84" height="110"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="descCardView" destination="4ER-QR-Gvx" id="Il9-mm-d40"/>
                                     <outlet property="posterImageView" destination="1SC-eP-sVr" id="9Vj-0C-dt6"/>
                                     <outlet property="titleLabel" destination="SNH-DV-aRH" id="oyg-vD-fgk"/>
                                 </connections>
@@ -61,6 +67,12 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="jCN-ws-4NI">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="textButton.png" style="plain" id="awN-MV-bmq">
+                            <inset key="imageInsets" minX="-14" minY="0.0" maxX="-9" maxY="0.0"/>
+                            <connections>
+                                <action selector="toggleCardStateHandler:" destination="xfo-Ti-MIy" id="pOx-xa-4fI"/>
+                            </connections>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="CQm-gk-av3">
                             <rect key="frame" x="68" y="7" width="185" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,6 +82,9 @@
                             </segments>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="moviesCollectionView" destination="A3b-1D-AeB" id="ccH-pX-rwH"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3wm-rz-xeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -547,6 +562,7 @@
         <image name="not-seen-filled.png" width="111" height="111"/>
         <image name="not-seen.png" width="111" height="111"/>
         <image name="settingsNew.png" width="44" height="44"/>
+        <image name="textButton.png" width="44" height="44"/>
         <image name="thumb-avg-filled.png" width="111" height="111"/>
         <image name="thumb-avg.png" width="111" height="111"/>
         <image name="thumb-down-filled.png" width="111" height="111"/>

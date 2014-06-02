@@ -47,6 +47,9 @@
 		38F6A6BC190DE9510040448B /* poster8.png in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A6A6190DE9510040448B /* poster8.png */; };
 		38F6A6BD190DE9510040448B /* poster9.png in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A6A7190DE9510040448B /* poster9.png */; };
 		38F6A6BE190DE9510040448B /* posters.psd in Resources */ = {isa = PBXBuildFile; fileRef = 38F6A6A8190DE9510040448B /* posters.psd */; };
+		E006C9A9193863B3009D1172 /* HelperObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E006C9A8193863B3009D1172 /* HelperObject.m */; };
+		E006C9AB193C4552009D1172 /* textIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E006C9AA193C4552009D1172 /* textIcon.png */; };
+		E006C9AD193C4614009D1172 /* textButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E006C9AC193C4614009D1172 /* textButton@2x.png */; };
 		E071DE8319209EBA00079791 /* icons.psd in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7A19209EBA00079791 /* icons.psd */; };
 		E071DE8419209EBA00079791 /* not-seen-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7B19209EBA00079791 /* not-seen-filled.png */; };
 		E071DE8519209EBA00079791 /* not-seen.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7C19209EBA00079791 /* not-seen.png */; };
@@ -63,8 +66,6 @@
 		E09F5F561925D0E500FC2A4F /* RecSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F551925D0E500FC2A4F /* RecSettingsViewController.m */; };
 		E09F5F58192823F200FC2A4F /* frozenBigPoster.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F57192823F200FC2A4F /* frozenBigPoster.png */; };
 		E09F5F5A19283F1200FC2A4F /* overlay2.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F5919283F1200FC2A4F /* overlay2.png */; };
-		E09F5F641928497900FC2A4F /* settings4.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F631928497900FC2A4F /* settings4.png */; };
-		E09F5F66192849BF00FC2A4F /* setting5.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F65192849BF00FC2A4F /* setting5.png */; };
 		E09F5F6C192854AB00FC2A4F /* add3.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F6B192854AB00FC2A4F /* add3.png */; };
 		E09F5F6E192856F300FC2A4F /* settingsNew.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F6D192856F300FC2A4F /* settingsNew.png */; };
 		E09F5F7019296D6E00FC2A4F /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F6F19296D6E00FC2A4F /* ChartView.xib */; };
@@ -136,6 +137,10 @@
 		38F6A6A7190DE9510040448B /* poster9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster9.png; sourceTree = "<group>"; };
 		38F6A6A8190DE9510040448B /* posters.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = posters.psd; sourceTree = "<group>"; };
 		7835C99893B14E1583E2D117 /* Pods-MoviesApp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp.xcconfig"; path = "Pods/Pods-MoviesApp.xcconfig"; sourceTree = "<group>"; };
+		E006C9A7193863B3009D1172 /* HelperObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperObject.h; path = ../HelperObject.h; sourceTree = "<group>"; };
+		E006C9A8193863B3009D1172 /* HelperObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperObject.m; path = ../HelperObject.m; sourceTree = "<group>"; };
+		E006C9AA193C4552009D1172 /* textIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textIcon.png; sourceTree = "<group>"; };
+		E006C9AC193C4614009D1172 /* textButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textButton@2x.png"; sourceTree = "<group>"; };
 		E071DE7A19209EBA00079791 /* icons.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.psd; sourceTree = "<group>"; };
 		E071DE7B19209EBA00079791 /* not-seen-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-seen-filled.png"; sourceTree = "<group>"; };
 		E071DE7C19209EBA00079791 /* not-seen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-seen.png"; sourceTree = "<group>"; };
@@ -154,8 +159,6 @@
 		E09F5F551925D0E500FC2A4F /* RecSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecSettingsViewController.m; sourceTree = "<group>"; };
 		E09F5F57192823F200FC2A4F /* frozenBigPoster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frozenBigPoster.png; sourceTree = "<group>"; };
 		E09F5F5919283F1200FC2A4F /* overlay2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay2.png; sourceTree = "<group>"; };
-		E09F5F631928497900FC2A4F /* settings4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings4.png; sourceTree = "<group>"; };
-		E09F5F65192849BF00FC2A4F /* setting5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting5.png; sourceTree = "<group>"; };
 		E09F5F6B192854AB00FC2A4F /* add3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add3.png; sourceTree = "<group>"; };
 		E09F5F6D192856F300FC2A4F /* settingsNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsNew.png; sourceTree = "<group>"; };
 		E09F5F6F19296D6E00FC2A4F /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChartView.xib; path = ../ChartView.xib; sourceTree = "<group>"; };
@@ -316,11 +319,11 @@
 		E071DE7919209EBA00079791 /* glyphs */ = {
 			isa = PBXGroup;
 			children = (
+				E006C9AC193C4614009D1172 /* textButton@2x.png */,
+				E006C9AA193C4552009D1172 /* textIcon.png */,
 				E09F5F6D192856F300FC2A4F /* settingsNew.png */,
 				E09F5F6B192854AB00FC2A4F /* add3.png */,
 				E071DE7A19209EBA00079791 /* icons.psd */,
-				E09F5F65192849BF00FC2A4F /* setting5.png */,
-				E09F5F631928497900FC2A4F /* settings4.png */,
 				E071DE7B19209EBA00079791 /* not-seen-filled.png */,
 				E071DE7C19209EBA00079791 /* not-seen.png */,
 				E071DE7D19209EBA00079791 /* thumb-avg-filled.png */,
@@ -361,6 +364,8 @@
 		E09F5F78192E555400FC2A4F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E006C9A7193863B3009D1172 /* HelperObject.h */,
+				E006C9A8193863B3009D1172 /* HelperObject.m */,
 				E09F5F75192E553D00FC2A4F /* UIImage+ImageEffect.h */,
 				E09F5F76192E553D00FC2A4F /* UIImage+ImageEffect.m */,
 			);
@@ -475,6 +480,7 @@
 				38F6A6B8190DE9510040448B /* poster4.png in Resources */,
 				38F6A665190C7C300040448B /* Main_iPad.storyboard in Resources */,
 				3871CB03190F7FB1001D59B9 /* poster3.png in Resources */,
+				E006C9AB193C4552009D1172 /* textIcon.png in Resources */,
 				E071DEDA1922789D00079791 /* RecView.xib in Resources */,
 				38F6A6B4190DE9510040448B /* poster16.png in Resources */,
 				38F6A6B7190DE9510040448B /* poster2.png in Resources */,
@@ -483,10 +489,10 @@
 				E071DE8B19209EBA00079791 /* thumbs-up.png in Resources */,
 				38F6A6BD190DE9510040448B /* poster9.png in Resources */,
 				E071DE8919209EBA00079791 /* thumb-down.png in Resources */,
+				E006C9AD193C4614009D1172 /* textButton@2x.png in Resources */,
 				38F6A6AF190DE9510040448B /* poster11.png in Resources */,
 				E071DE8A19209EBA00079791 /* thumb-up-filled.png in Resources */,
 				E071DE8719209EBA00079791 /* thumb-avg.png in Resources */,
-				E09F5F66192849BF00FC2A4F /* setting5.png in Resources */,
 				38F6A6BB190DE9510040448B /* poster7.png in Resources */,
 				38F6A6B2190DE9510040448B /* poster14.png in Resources */,
 				38F6A6BC190DE9510040448B /* poster8.png in Resources */,
@@ -502,7 +508,6 @@
 				38F6A6B3190DE9510040448B /* poster15.png in Resources */,
 				38F6A6B5190DE9510040448B /* poster17.png in Resources */,
 				38F6A66D190C7C300040448B /* Images.xcassets in Resources */,
-				E09F5F641928497900FC2A4F /* settings4.png in Resources */,
 				E071DE8819209EBA00079791 /* thumb-down-filled.png in Resources */,
 				E071DE8319209EBA00079791 /* icons.psd in Resources */,
 				E09F5F7019296D6E00FC2A4F /* ChartView.xib in Resources */,
@@ -569,6 +574,7 @@
 				38F6A691190DE4A60040448B /* PosterView.m in Sources */,
 				E09F5F561925D0E500FC2A4F /* RecSettingsViewController.m in Sources */,
 				E071DEDD1922796100079791 /* RecView.m in Sources */,
+				E006C9A9193863B3009D1172 /* HelperObject.m in Sources */,
 				E0C6DE42191CA37200740C1E /* StatsViewController.m in Sources */,
 				E0C6DE46191CA67700740C1E /* MovieViewCell.m in Sources */,
 				E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */,
