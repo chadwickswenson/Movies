@@ -63,6 +63,7 @@
 		E071DEDD1922796100079791 /* RecView.m in Sources */ = {isa = PBXBuildFile; fileRef = E071DEDC1922796100079791 /* RecView.m */; };
 		E071DEDF1922E01700079791 /* large-poster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E071DEDE1922E01700079791 /* large-poster.jpg */; };
 		E071DEE11923402000079791 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DEE01923402000079791 /* overlay.png */; };
+		E0844408193EDDC600A729F8 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0844407193EDDC600A729F8 /* MovieCell.swift */; };
 		E09F5F561925D0E500FC2A4F /* RecSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F551925D0E500FC2A4F /* RecSettingsViewController.m */; };
 		E09F5F58192823F200FC2A4F /* frozenBigPoster.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F57192823F200FC2A4F /* frozenBigPoster.png */; };
 		E09F5F5A19283F1200FC2A4F /* overlay2.png in Resources */ = {isa = PBXBuildFile; fileRef = E09F5F5919283F1200FC2A4F /* overlay2.png */; };
@@ -72,9 +73,9 @@
 		E09F5F74192972A000FC2A4F /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F73192972A000FC2A4F /* ChartView.m */; };
 		E09F5F77192E553D00FC2A4F /* UIImage+ImageEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F76192E553D00FC2A4F /* UIImage+ImageEffect.m */; };
 		E09F5F7B192EE12A00FC2A4F /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F7A192EE12A00FC2A4F /* RatingViewController.m */; };
+		E0C327FA193D7D5E00018ECC /* MyMoviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C327F9193D7D5E00018ECC /* MyMoviesVC.swift */; };
 		E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */; };
 		E0C6DE42191CA37200740C1E /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE41191CA37200740C1E /* StatsViewController.m */; };
-		E0C6DE46191CA67700740C1E /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE45191CA67700740C1E /* MovieViewCell.m */; };
 		F570B02A0FFE4E36BA5A31AD /* libPods-MoviesApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDBB71B65BE44C88E7C4896 /* libPods-MoviesApp.a */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,7 @@
 		E071DEDC1922796100079791 /* RecView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecView.m; path = ../RecView.m; sourceTree = "<group>"; };
 		E071DEDE1922E01700079791 /* large-poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "large-poster.jpg"; path = "MoviesApp/large-poster.jpg"; sourceTree = "<group>"; };
 		E071DEE01923402000079791 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overlay.png; path = MoviesApp/overlay.png; sourceTree = "<group>"; };
+		E0844407193EDDC600A729F8 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieCell.swift; path = ../MovieCell.swift; sourceTree = "<group>"; };
 		E09F5F541925D0E500FC2A4F /* RecSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecSettingsViewController.h; sourceTree = "<group>"; };
 		E09F5F551925D0E500FC2A4F /* RecSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecSettingsViewController.m; sourceTree = "<group>"; };
 		E09F5F57192823F200FC2A4F /* frozenBigPoster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frozenBigPoster.png; sourceTree = "<group>"; };
@@ -168,12 +170,12 @@
 		E09F5F76192E553D00FC2A4F /* UIImage+ImageEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffect.m"; sourceTree = "<group>"; };
 		E09F5F79192EE12A00FC2A4F /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingViewController.h; sourceTree = "<group>"; };
 		E09F5F7A192EE12A00FC2A4F /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingViewController.m; sourceTree = "<group>"; };
+		E0C327F6193D772600018ECC /* MoviesApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoviesApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		E0C327F9193D7D5E00018ECC /* MyMoviesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoviesVC.swift; sourceTree = "<group>"; };
 		E0C6DE3D191C9F4E00740C1E /* MyMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMoviesViewController.h; sourceTree = "<group>"; };
 		E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMoviesViewController.m; sourceTree = "<group>"; };
 		E0C6DE40191CA37200740C1E /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		E0C6DE41191CA37200740C1E /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
-		E0C6DE44191CA67700740C1E /* MovieViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieViewCell.h; path = ../MovieViewCell.h; sourceTree = "<group>"; };
-		E0C6DE45191CA67700740C1E /* MovieViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieViewCell.m; path = ../MovieViewCell.m; sourceTree = "<group>"; };
 		EEDBB71B65BE44C88E7C4896 /* libPods-MoviesApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoviesApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 				38F6A64D190C7C300040448B /* Frameworks */,
 				38F6A64C190C7C300040448B /* Products */,
 				7835C99893B14E1583E2D117 /* Pods-MoviesApp.xcconfig */,
+				E0C327F6193D772600018ECC /* MoviesApp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,8 +247,7 @@
 				38F6A65E190C7C300040448B /* AppDelegate.m */,
 				E071DE7919209EBA00079791 /* glyphs */,
 				E071DEE21923406E00079791 /* assets */,
-				E0C6DE44191CA67700740C1E /* MovieViewCell.h */,
-				E0C6DE45191CA67700740C1E /* MovieViewCell.m */,
+				E0844407193EDDC600A729F8 /* MovieCell.swift */,
 				E09F5F6F19296D6E00FC2A4F /* ChartView.xib */,
 				E071DED91922789D00079791 /* RecView.xib */,
 				38F6A660190C7C300040448B /* Main_iPhone.storyboard */,
@@ -375,6 +377,7 @@
 		E0C6DE43191CA37B00740C1E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0C327F9193D7D5E00018ECC /* MyMoviesVC.swift */,
 				E09F5F79192EE12A00FC2A4F /* RatingViewController.h */,
 				E09F5F7A192EE12A00FC2A4F /* RatingViewController.m */,
 				E0C6DE40191CA37200740C1E /* StatsViewController.h */,
@@ -572,12 +575,13 @@
 			files = (
 				38F6A68B190C7DDA0040448B /* Recs.m in Sources */,
 				38F6A691190DE4A60040448B /* PosterView.m in Sources */,
+				E0C327FA193D7D5E00018ECC /* MyMoviesVC.swift in Sources */,
 				E09F5F561925D0E500FC2A4F /* RecSettingsViewController.m in Sources */,
 				E071DEDD1922796100079791 /* RecView.m in Sources */,
 				E006C9A9193863B3009D1172 /* HelperObject.m in Sources */,
 				E0C6DE42191CA37200740C1E /* StatsViewController.m in Sources */,
-				E0C6DE46191CA67700740C1E /* MovieViewCell.m in Sources */,
 				E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */,
+				E0844408193EDDC600A729F8 /* MovieCell.swift in Sources */,
 				38F6A65F190C7C300040448B /* AppDelegate.m in Sources */,
 				E09F5F7B192EE12A00FC2A4F /* RatingViewController.m in Sources */,
 				E09F5F77192E553D00FC2A4F /* UIImage+ImageEffect.m in Sources */,
@@ -719,13 +723,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoviesApp/MoviesApp-Prefix.pch";
 				INFOPLIST_FILE = "MoviesApp/MoviesApp-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoviesApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -736,13 +744,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoviesApp/MoviesApp-Prefix.pch";
 				INFOPLIST_FILE = "MoviesApp/MoviesApp-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoviesApp-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
