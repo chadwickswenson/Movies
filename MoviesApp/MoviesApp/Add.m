@@ -211,13 +211,17 @@
             }];
         }
         else{
+            self.thumbUpFilled.alpha = 0;
+            self.thumbAvgFilled.alpha = 0;
+            self.thumbDownFilled.alpha = 0;
+            self.notSeenFilled.alpha = 0;
             
             POPSpringAnimation *button1Animation = [POPSpringAnimation animation];
             button1Animation.property = [POPAnimatableProperty propertyWithName:kPOPLayerPosition];
             
             button1Animation.toValue = [NSValue valueWithCGPoint:CGPointMake(MOVIE_X_POS+100, MOVIE_Y_POS+150)];
             
-            button1Animation.springBounciness = 12.0;
+            button1Animation.springBounciness = 17.0;
             button1Animation.springSpeed = 10.0;
             
             [curMovie.layer pop_addAnimation:button1Animation forKey:@"back"];

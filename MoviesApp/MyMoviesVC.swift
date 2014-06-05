@@ -73,7 +73,18 @@ class MyMoviesVC: UICollectionViewController, UICollectionViewDelegate, UICollec
         }
         
         
-        cell.infoView.alpha = cellState;
+        cell.infoView.alpha = cellState
+        
+       var button1Animation = POPSpringAnimation()
+        
+        button1Animation.property = POPAnimatableProperty.propertyWithName(kPOPLayerPosition) as POPAnimatableProperty
+        //let aRect: CGPoint = CGPointMake(50, 50)
+        button1Animation.toValue = NSValue(CGPoint: CGPointMake(cell.frame.origin.x+50, cell.frame.origin.y+50))
+        
+        button1Animation.springBounciness = 21.0
+        button1Animation.springSpeed = 10.0
+        
+        cell.layer.pop_addAnimation(button1Animation, forKey:"back")
         
         return cell
     }
