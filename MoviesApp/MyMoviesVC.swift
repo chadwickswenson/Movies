@@ -45,8 +45,8 @@ class MyMoviesVC: UICollectionViewController, UICollectionViewDelegate, UICollec
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        posters = ["poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10"]
-         posters2 = ["poster3","poster1","poster11","poster2","poster4","poster5","poster7","poster9","poster12","poster13"]
+        posters = ["poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10"]
+         posters2 = ["poster3","poster1","poster11","poster2","poster4","poster5","poster7","poster9","poster12","poster13","poster3","poster1","poster11","poster2","poster4","poster5","poster7","poster9","poster12","poster13","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10"]
        
        
     }
@@ -71,20 +71,26 @@ class MyMoviesVC: UICollectionViewController, UICollectionViewDelegate, UICollec
         else{
             cell.posterImageView.image = UIImage(named:posters[indexPath.row])
         }
+        var f = cell.posterImageView.frame
+        f.size.width = 0
+        f.size.height = 0
+        f.origin.x = 50
+        f.origin.y = 75
+        cell.posterImageView.frame = f
+        
+        cell.infoView.alpha = Float(cellState)
+        
+        var cellAni = POPSpringAnimation()
+        
+        cellAni.property = POPAnimatableProperty.propertyWithName(kPOPLayerSize) as POPAnimatableProperty
+        
+        cellAni.toValue = NSValue(CGSize: CGSizeMake(105, 152))
+        
+        cellAni.springBounciness = CGFloat(arc4random()%6+3)
+        cellAni.springSpeed = CGFloat(arc4random()%30+30)
         
         
-        cell.infoView.alpha = cellState
-        
-       var button1Animation = POPSpringAnimation()
-        
-        button1Animation.property = POPAnimatableProperty.propertyWithName(kPOPLayerPosition) as POPAnimatableProperty
-        //let aRect: CGPoint = CGPointMake(50, 50)
-        button1Animation.toValue = NSValue(CGPoint: CGPointMake(cell.frame.origin.x+50, cell.frame.origin.y+50))
-        
-        button1Animation.springBounciness = 21.0
-        button1Animation.springSpeed = 10.0
-        
-        cell.layer.pop_addAnimation(button1Animation, forKey:"back")
+        cell.posterImageView.layer.pop_addAnimation(cellAni,forKey:"back")
         
         return cell
     }
