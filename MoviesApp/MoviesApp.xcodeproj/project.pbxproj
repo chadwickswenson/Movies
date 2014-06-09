@@ -50,6 +50,7 @@
 		E006C9A9193863B3009D1172 /* HelperObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E006C9A8193863B3009D1172 /* HelperObject.m */; };
 		E006C9AB193C4552009D1172 /* textIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E006C9AA193C4552009D1172 /* textIcon.png */; };
 		E006C9AD193C4614009D1172 /* textButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E006C9AC193C4614009D1172 /* textButton@2x.png */; };
+		E0364B6619452C6D00B96B8C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0364B6519452C6D00B96B8C /* SignUpViewController.swift */; };
 		E071DE8319209EBA00079791 /* icons.psd in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7A19209EBA00079791 /* icons.psd */; };
 		E071DE8419209EBA00079791 /* not-seen-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7B19209EBA00079791 /* not-seen-filled.png */; };
 		E071DE8519209EBA00079791 /* not-seen.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7C19209EBA00079791 /* not-seen.png */; };
@@ -142,6 +143,7 @@
 		E006C9A8193863B3009D1172 /* HelperObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperObject.m; path = ../HelperObject.m; sourceTree = "<group>"; };
 		E006C9AA193C4552009D1172 /* textIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textIcon.png; sourceTree = "<group>"; };
 		E006C9AC193C4614009D1172 /* textButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textButton@2x.png"; sourceTree = "<group>"; };
+		E0364B6519452C6D00B96B8C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E071DE7A19209EBA00079791 /* icons.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.psd; sourceTree = "<group>"; };
 		E071DE7B19209EBA00079791 /* not-seen-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-seen-filled.png"; sourceTree = "<group>"; };
 		E071DE7C19209EBA00079791 /* not-seen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-seen.png"; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		38F6A654190C7C300040448B /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				E0364B6719452DD800B96B8C /* Storyboard & nib */,
 				E09F5F78192E555400FC2A4F /* Helpers */,
 				E09F5F711929725300FC2A4F /* Views */,
 				E0C6DE43191CA37B00740C1E /* ViewControllers */,
@@ -248,9 +251,6 @@
 				E071DE7919209EBA00079791 /* glyphs */,
 				E071DEE21923406E00079791 /* assets */,
 				E0844407193EDDC600A729F8 /* MovieCell.swift */,
-				E09F5F6F19296D6E00FC2A4F /* ChartView.xib */,
-				E071DED91922789D00079791 /* RecView.xib */,
-				38F6A660190C7C300040448B /* Main_iPhone.storyboard */,
 				38F6A663190C7C300040448B /* Main_iPad.storyboard */,
 				38F6A66C190C7C300040448B /* Images.xcassets */,
 				38F6A655190C7C300040448B /* Supporting Files */,
@@ -318,6 +318,16 @@
 			path = posters;
 			sourceTree = "<group>";
 		};
+		E0364B6719452DD800B96B8C /* Storyboard & nib */ = {
+			isa = PBXGroup;
+			children = (
+				E09F5F6F19296D6E00FC2A4F /* ChartView.xib */,
+				E071DED91922789D00079791 /* RecView.xib */,
+				38F6A660190C7C300040448B /* Main_iPhone.storyboard */,
+			);
+			name = "Storyboard & nib";
+			sourceTree = "<group>";
+		};
 		E071DE7919209EBA00079791 /* glyphs */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +387,7 @@
 		E0C6DE43191CA37B00740C1E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E0364B6519452C6D00B96B8C /* SignUpViewController.swift */,
 				E0C327F9193D7D5E00018ECC /* MyMoviesVC.swift */,
 				E09F5F79192EE12A00FC2A4F /* RatingViewController.h */,
 				E09F5F7A192EE12A00FC2A4F /* RatingViewController.m */,
@@ -583,6 +594,7 @@
 				E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */,
 				E0844408193EDDC600A729F8 /* MovieCell.swift in Sources */,
 				38F6A65F190C7C300040448B /* AppDelegate.m in Sources */,
+				E0364B6619452C6D00B96B8C /* SignUpViewController.swift in Sources */,
 				E09F5F7B192EE12A00FC2A4F /* RatingViewController.m in Sources */,
 				E09F5F77192E553D00FC2A4F /* UIImage+ImageEffect.m in Sources */,
 				38F6A68E190C7E410040448B /* Add.m in Sources */,
@@ -726,10 +738,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoviesApp/MoviesApp-Prefix.pch";
 				INFOPLIST_FILE = "MoviesApp/MoviesApp-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_MODULE_NAME = MoviesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoviesApp-Bridging-Header.h";
@@ -747,10 +761,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoviesApp/MoviesApp-Prefix.pch";
 				INFOPLIST_FILE = "MoviesApp/MoviesApp-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_MODULE_NAME = MoviesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoviesApp-Bridging-Header.h";

@@ -89,6 +89,22 @@
     
     [self presentViewController:new animated:YES completion:nil];
 }
+/*- (void)presentSignUp {
+    SignUpViewController *new = (SignUpViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"signUp"];
+    //menu is only an example
+    new.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    CGRect rect = [keyWindow bounds];
+    UIGraphicsBeginImageContextWithOptions(rect.size,YES,0.0f);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [keyWindow.layer renderInContext:context];
+    UIImage *capturedScreen = UIGraphicsGetImageFromCurrentImageContext();
+    
+    new.screenImage =capturedScreen;
+    
+    [self presentViewController:new animated:YES completion:nil];
+}*/
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line

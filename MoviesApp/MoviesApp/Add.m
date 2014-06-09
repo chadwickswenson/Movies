@@ -9,6 +9,7 @@
 #import "Add.h"
 #import "PosterView.h"
 #import <POP/POP.h>
+#import "MoviesApp-Swift.h"
 
 
 #define ARC4RANDOM_MAX      0x100000000
@@ -77,6 +78,22 @@
 }
 - (void)nextMovieSteps:(CGFloat)vel {
     
+}
+-(void)presentSignUp {
+    SignUpViewController *new = (SignUpViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"signUp"];
+    //menu is only an example
+    new.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+//    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+//    CGRect rect = [keyWindow bounds];
+//    UIGraphicsBeginImageContextWithOptions(rect.size,YES,0.0f);
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    [keyWindow.layer renderInContext:context];
+//    UIImage *capturedScreen = UIGraphicsGetImageFromCurrentImageContext();
+//    
+//    new.screenImage =capturedScreen;
+    
+    [self presentViewController:new animated:YES completion:nil];
 }
 - (IBAction)dragAction:(UIPanGestureRecognizer *)sender {
     if(sender.state == UIGestureRecognizerStateBegan){
@@ -248,14 +265,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+   
     self.stackArr = [[NSMutableArray alloc] init];
     [self loadMovies];
     [self initMoviesToView];
     [self setZIndexes];
     [UITabBarItem.appearance setTitleTextAttributes:@{
                                                       UITextAttributeTextColor : [UIColor colorWithRed:40/255 green:55/255 blue:55/255 alpha:1] } forState:UIControlStateNormal];
-
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
+     [self presentSignUp];
 }
 
 

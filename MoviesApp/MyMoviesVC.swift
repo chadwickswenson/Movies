@@ -13,6 +13,7 @@ var posters = String[]()
 var posters2 = String[]()
 var cellState = 0.0
 var listNumber = 0
+var seenMovies = [("poster1.png", "Lord of the Rings", "2003")]
 
 class MyMoviesVC: UICollectionViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     @IBOutlet var moviesCollectionView : UICollectionView = nil
@@ -47,7 +48,14 @@ class MyMoviesVC: UICollectionViewController, UICollectionViewDelegate, UICollec
         // Do any additional setup after loading the view, typically from a nib.
         posters = ["poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10"]
          posters2 = ["poster3","poster1","poster11","poster2","poster4","poster5","poster7","poster9","poster12","poster13","poster3","poster1","poster11","poster2","poster4","poster5","poster7","poster9","poster12","poster13","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10","poster1","poster2","poster3","poster4","poster5","poster6","poster7","poster8","poster9","poster10"]
-       
+        
+       // var seenMovies = [("poster1.png", "Lord of the Rings", "2003")]
+        
+        for i in 1...20 {
+            seenMovies += ("poster\(i).png", "lotr", "2004")
+        }
+        
+       println(seenMovies[2].0)
        
     }
     
@@ -69,7 +77,7 @@ class MyMoviesVC: UICollectionViewController, UICollectionViewDelegate, UICollec
             cell.posterImageView.image = UIImage(named:posters2[indexPath.row])
         }
         else{
-            cell.posterImageView.image = UIImage(named:posters[indexPath.row])
+            cell.posterImageView.image = UIImage(named:seenMovies[indexPath.row].0)
         }
         var f = cell.posterImageView.frame
         f.size.width = 0
@@ -86,8 +94,8 @@ class MyMoviesVC: UICollectionViewController, UICollectionViewDelegate, UICollec
         
         cellAni.toValue = NSValue(CGSize: CGSizeMake(105, 152))
         
-        cellAni.springBounciness = CGFloat(arc4random()%6+3)
-        cellAni.springSpeed = CGFloat(arc4random()%30+30)
+        cellAni.springBounciness = CGFloat(arc4random()%6+5)
+        cellAni.springSpeed = CGFloat(arc4random()%20+10)
         
         
         cell.posterImageView.layer.pop_addAnimation(cellAni,forKey:"back")
