@@ -51,6 +51,7 @@
 		E006C9AB193C4552009D1172 /* textIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E006C9AA193C4552009D1172 /* textIcon.png */; };
 		E006C9AD193C4614009D1172 /* textButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E006C9AC193C4614009D1172 /* textButton@2x.png */; };
 		E0364B6619452C6D00B96B8C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0364B6519452C6D00B96B8C /* SignUpViewController.swift */; };
+		E046B6061945875D00E10A04 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E046B6051945875D00E10A04 /* MainMenuViewController.swift */; };
 		E071DE8319209EBA00079791 /* icons.psd in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7A19209EBA00079791 /* icons.psd */; };
 		E071DE8419209EBA00079791 /* not-seen-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7B19209EBA00079791 /* not-seen-filled.png */; };
 		E071DE8519209EBA00079791 /* not-seen.png in Resources */ = {isa = PBXBuildFile; fileRef = E071DE7C19209EBA00079791 /* not-seen.png */; };
@@ -74,6 +75,7 @@
 		E09F5F74192972A000FC2A4F /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F73192972A000FC2A4F /* ChartView.m */; };
 		E09F5F77192E553D00FC2A4F /* UIImage+ImageEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F76192E553D00FC2A4F /* UIImage+ImageEffect.m */; };
 		E09F5F7B192EE12A00FC2A4F /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09F5F7A192EE12A00FC2A4F /* RatingViewController.m */; };
+		E0B751BE1946D4A200F7F819 /* createBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0B751BD1946D4A200F7F819 /* createBg.jpg */; };
 		E0C327FA193D7D5E00018ECC /* MyMoviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C327F9193D7D5E00018ECC /* MyMoviesVC.swift */; };
 		E0C6DE3F191C9F4E00740C1E /* MyMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE3E191C9F4E00740C1E /* MyMoviesViewController.m */; };
 		E0C6DE42191CA37200740C1E /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6DE41191CA37200740C1E /* StatsViewController.m */; };
@@ -144,6 +146,7 @@
 		E006C9AA193C4552009D1172 /* textIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textIcon.png; sourceTree = "<group>"; };
 		E006C9AC193C4614009D1172 /* textButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textButton@2x.png"; sourceTree = "<group>"; };
 		E0364B6519452C6D00B96B8C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E046B6051945875D00E10A04 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		E071DE7A19209EBA00079791 /* icons.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.psd; sourceTree = "<group>"; };
 		E071DE7B19209EBA00079791 /* not-seen-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-seen-filled.png"; sourceTree = "<group>"; };
 		E071DE7C19209EBA00079791 /* not-seen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-seen.png"; sourceTree = "<group>"; };
@@ -172,6 +175,7 @@
 		E09F5F76192E553D00FC2A4F /* UIImage+ImageEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffect.m"; sourceTree = "<group>"; };
 		E09F5F79192EE12A00FC2A4F /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingViewController.h; sourceTree = "<group>"; };
 		E09F5F7A192EE12A00FC2A4F /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingViewController.m; sourceTree = "<group>"; };
+		E0B751BD1946D4A200F7F819 /* createBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = createBg.jpg; sourceTree = "<group>"; };
 		E0C327F6193D772600018ECC /* MoviesApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoviesApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		E0C327F9193D7D5E00018ECC /* MyMoviesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoviesVC.swift; sourceTree = "<group>"; };
 		E0C6DE3D191C9F4E00740C1E /* MyMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMoviesViewController.h; sourceTree = "<group>"; };
@@ -351,6 +355,7 @@
 		E071DEE21923406E00079791 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				E0B751BD1946D4A200F7F819 /* createBg.jpg */,
 				E071DEDE1922E01700079791 /* large-poster.jpg */,
 				E09F5F5919283F1200FC2A4F /* overlay2.png */,
 				E09F5F57192823F200FC2A4F /* frozenBigPoster.png */,
@@ -387,6 +392,7 @@
 		E0C6DE43191CA37B00740C1E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E046B6051945875D00E10A04 /* MainMenuViewController.swift */,
 				E0364B6519452C6D00B96B8C /* SignUpViewController.swift */,
 				E0C327F9193D7D5E00018ECC /* MyMoviesVC.swift */,
 				E09F5F79192EE12A00FC2A4F /* RatingViewController.h */,
@@ -490,6 +496,7 @@
 				38F6A6A9190DE9510040448B /* landing.pdf in Resources */,
 				38F6A6B6190DE9510040448B /* poster18.png in Resources */,
 				38F6A6B1190DE9510040448B /* poster13.png in Resources */,
+				E0B751BE1946D4A200F7F819 /* createBg.jpg in Resources */,
 				E09F5F6C192854AB00FC2A4F /* add3.png in Resources */,
 				38F6A6B8190DE9510040448B /* poster4.png in Resources */,
 				38F6A665190C7C300040448B /* Main_iPad.storyboard in Resources */,
@@ -595,6 +602,7 @@
 				E0844408193EDDC600A729F8 /* MovieCell.swift in Sources */,
 				38F6A65F190C7C300040448B /* AppDelegate.m in Sources */,
 				E0364B6619452C6D00B96B8C /* SignUpViewController.swift in Sources */,
+				E046B6061945875D00E10A04 /* MainMenuViewController.swift in Sources */,
 				E09F5F7B192EE12A00FC2A4F /* RatingViewController.m in Sources */,
 				E09F5F77192E553D00FC2A4F /* UIImage+ImageEffect.m in Sources */,
 				38F6A68E190C7E410040448B /* Add.m in Sources */,

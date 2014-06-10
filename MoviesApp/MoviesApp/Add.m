@@ -275,7 +275,7 @@
     
 }
 -(void)viewDidAppear:(BOOL)animated{
-     [self presentSignUp];
+        [self presentSignUp];
 }
 
 

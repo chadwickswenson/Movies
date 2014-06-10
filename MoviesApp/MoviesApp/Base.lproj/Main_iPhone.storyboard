@@ -296,24 +296,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="createBg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yfp-Pi-PHU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xMp-Ph-Lw6">
-                                <rect key="frame" x="20" y="149" width="280" height="30"/>
+                                <rect key="frame" x="20" y="199" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sign up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMj-rN-xjP">
-                                <rect key="frame" x="138" y="100" width="57" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMj-rN-xjP">
+                                <rect key="frame" x="44" y="48" width="232" height="41"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBn-ae-Qie">
+                                <rect key="frame" x="15" y="528" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DismissHandler:" destination="3ga-In-ufu" eventType="touchUpInside" id="dKd-gy-xNz"/>
+                                </connections>
+                            </button>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-oj-o0v">
+                                <rect key="frame" x="20" y="244" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxT-1i-RdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1784" y="-4973"/>
+            <point key="canvasLocation" x="896" y="-5109"/>
         </scene>
         <!--Add - Add Movies-->
         <scene sceneID="0Lh-mR-mlh">
@@ -399,11 +416,49 @@
                         <segue destination="hxZ-Cc-OGo" kind="relationship" relationship="viewControllers" id="hq3-iC-iso"/>
                         <segue destination="WFq-Ey-4ik" kind="relationship" relationship="viewControllers" id="3P5-ah-79q"/>
                         <segue destination="God-yB-Vac" kind="relationship" relationship="viewControllers" id="mUO-Ux-cwK"/>
+                        <segue destination="xsQ-xV-sx9" kind="relationship" relationship="viewControllers" id="JZo-JT-QnH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oda-8Z-AgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1480" y="-4078"/>
+        </scene>
+        <!--Navigation Controller - Hello-->
+        <scene sceneID="e6L-Wr-CKX">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" title="Hello" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="xsQ-xV-sx9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="OLh-mP-tVt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O6a-hK-xXm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MMU-je-QP2" kind="relationship" relationship="rootViewController" id="8F6-54-Zxz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIo-aU-6B9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="-4093"/>
+        </scene>
+        <!--Main Menu View Controller - Menu-->
+        <scene sceneID="qfb-uf-9s4">
+            <objects>
+                <viewController id="MMU-je-QP2" customClass="MainMenuViewController" customModule="MoviesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NRD-C9-tmb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gz3-56-LK4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RUq-sS-Wph">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu" id="9CU-GI-2ft" customClass="MainMenu"/>
+                    <navigationItem key="navigationItem" id="vZw-hl-IbC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMu-Fx-SP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-4084"/>
         </scene>
         <!--Navigation Controller - Lists-->
         <scene sceneID="kK3-W3-siA">
@@ -550,6 +605,7 @@
     </scenes>
     <resources>
         <image name="add3.png" width="48" height="32"/>
+        <image name="createBg.jpg" width="640" height="1136"/>
         <image name="first" width="30" height="30"/>
         <image name="not-seen-filled.png" width="111" height="111"/>
         <image name="not-seen.png" width="111" height="111"/>

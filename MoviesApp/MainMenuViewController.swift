@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  MainMenuViewController.swift
 //  MoviesApp
 //
 //  Created by chad swenson on 6/8/14.
@@ -9,13 +9,11 @@
 import Foundation
 import UIKit
 
-class SignUpViewController: UIViewController{
+class MainMenuViewController: UIViewController{
     
-    @IBAction func DismissHandler(sender : AnyObject) {
-        self.dismissViewControllerAnimated(true, completion:nil);
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "What to Watch"
     }
+    
 }
